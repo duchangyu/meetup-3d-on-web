@@ -1,0 +1,44 @@
+Type.registerNamespace('Pulte08.AjaxWebServices');
+Pulte08.AjaxWebServices.ContactUsService=function() {
+Pulte08.AjaxWebServices.ContactUsService.initializeBase(this);
+this._timeout = 0;
+this._userContext = null;
+this._succeeded = null;
+this._failed = null;
+}
+Pulte08.AjaxWebServices.ContactUsService.prototype={
+_get_path:function() {
+ var p = this.get_path();
+ if (p) return p;
+ else return Pulte08.AjaxWebServices.ContactUsService._staticInstance.get_path();},
+SaveContactUs:function(siteID,eventContext,isLoggedIn,topicID,communityID,firstName,lastName,email,address1,address2,city,stateAbbreviation,zip,phoneAreaCode1,phonePrefix1,phoneSuffix1,phoneAreaCode2,phonePrefix2,phoneSuffix2,profilePhone1,profilePhone2,isInternational,country,countryName,provinceRegion,postalCode,phone1,phone2,updateProfile,message,informationSource,isBroker,brokerOffice,brokerTaxID,isServiceRequest,serviceEmail,serviceCommunityName,serviceItem,serviceRoom,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'SaveContactUs',false,{siteID:siteID,eventContext:eventContext,isLoggedIn:isLoggedIn,topicID:topicID,communityID:communityID,firstName:firstName,lastName:lastName,email:email,address1:address1,address2:address2,city:city,stateAbbreviation:stateAbbreviation,zip:zip,phoneAreaCode1:phoneAreaCode1,phonePrefix1:phonePrefix1,phoneSuffix1:phoneSuffix1,phoneAreaCode2:phoneAreaCode2,phonePrefix2:phonePrefix2,phoneSuffix2:phoneSuffix2,profilePhone1:profilePhone1,profilePhone2:profilePhone2,isInternational:isInternational,country:country,countryName:countryName,provinceRegion:provinceRegion,postalCode:postalCode,phone1:phone1,phone2:phone2,updateProfile:updateProfile,message:message,informationSource:informationSource,isBroker:isBroker,brokerOffice:brokerOffice,brokerTaxID:brokerTaxID,isServiceRequest:isServiceRequest,serviceEmail:serviceEmail,serviceCommunityName:serviceCommunityName,serviceItem:serviceItem,serviceRoom:serviceRoom},succeededCallback,failedCallback,userContext); },
+GetAreasByState:function(stateID,brandID,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'GetAreasByState',false,{stateID:stateID,brandID:brandID},succeededCallback,failedCallback,userContext); },
+GetCommunitiesByArea:function(areaID,brandID,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'GetCommunitiesByArea',false,{areaID:areaID,brandID:brandID},succeededCallback,failedCallback,userContext); },
+GetCommunitiesByRegion:function(regionID,brandID,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'GetCommunitiesByRegion',false,{regionID:regionID,brandID:brandID},succeededCallback,failedCallback,userContext); }}
+Pulte08.AjaxWebServices.ContactUsService.registerClass('Pulte08.AjaxWebServices.ContactUsService',Sys.Net.WebServiceProxy);
+Pulte08.AjaxWebServices.ContactUsService._staticInstance = new Pulte08.AjaxWebServices.ContactUsService();
+Pulte08.AjaxWebServices.ContactUsService.set_path = function(value) { Pulte08.AjaxWebServices.ContactUsService._staticInstance.set_path(value); }
+Pulte08.AjaxWebServices.ContactUsService.get_path = function() { return Pulte08.AjaxWebServices.ContactUsService._staticInstance.get_path(); }
+Pulte08.AjaxWebServices.ContactUsService.set_timeout = function(value) { Pulte08.AjaxWebServices.ContactUsService._staticInstance.set_timeout(value); }
+Pulte08.AjaxWebServices.ContactUsService.get_timeout = function() { return Pulte08.AjaxWebServices.ContactUsService._staticInstance.get_timeout(); }
+Pulte08.AjaxWebServices.ContactUsService.set_defaultUserContext = function(value) { Pulte08.AjaxWebServices.ContactUsService._staticInstance.set_defaultUserContext(value); }
+Pulte08.AjaxWebServices.ContactUsService.get_defaultUserContext = function() { return Pulte08.AjaxWebServices.ContactUsService._staticInstance.get_defaultUserContext(); }
+Pulte08.AjaxWebServices.ContactUsService.set_defaultSucceededCallback = function(value) { Pulte08.AjaxWebServices.ContactUsService._staticInstance.set_defaultSucceededCallback(value); }
+Pulte08.AjaxWebServices.ContactUsService.get_defaultSucceededCallback = function() { return Pulte08.AjaxWebServices.ContactUsService._staticInstance.get_defaultSucceededCallback(); }
+Pulte08.AjaxWebServices.ContactUsService.set_defaultFailedCallback = function(value) { Pulte08.AjaxWebServices.ContactUsService._staticInstance.set_defaultFailedCallback(value); }
+Pulte08.AjaxWebServices.ContactUsService.get_defaultFailedCallback = function() { return Pulte08.AjaxWebServices.ContactUsService._staticInstance.get_defaultFailedCallback(); }
+Pulte08.AjaxWebServices.ContactUsService.set_path("/AjaxWebServices/ContactUsService.asmx");
+Pulte08.AjaxWebServices.ContactUsService.SaveContactUs= function(siteID,eventContext,isLoggedIn,topicID,communityID,firstName,lastName,email,address1,address2,city,stateAbbreviation,zip,phoneAreaCode1,phonePrefix1,phoneSuffix1,phoneAreaCode2,phonePrefix2,phoneSuffix2,profilePhone1,profilePhone2,isInternational,country,countryName,provinceRegion,postalCode,phone1,phone2,updateProfile,message,informationSource,isBroker,brokerOffice,brokerTaxID,isServiceRequest,serviceEmail,serviceCommunityName,serviceItem,serviceRoom,onSuccess,onFailed,userContext) {Pulte08.AjaxWebServices.ContactUsService._staticInstance.SaveContactUs(siteID,eventContext,isLoggedIn,topicID,communityID,firstName,lastName,email,address1,address2,city,stateAbbreviation,zip,phoneAreaCode1,phonePrefix1,phoneSuffix1,phoneAreaCode2,phonePrefix2,phoneSuffix2,profilePhone1,profilePhone2,isInternational,country,countryName,provinceRegion,postalCode,phone1,phone2,updateProfile,message,informationSource,isBroker,brokerOffice,brokerTaxID,isServiceRequest,serviceEmail,serviceCommunityName,serviceItem,serviceRoom,onSuccess,onFailed,userContext); }
+Pulte08.AjaxWebServices.ContactUsService.GetAreasByState= function(stateID,brandID,onSuccess,onFailed,userContext) {Pulte08.AjaxWebServices.ContactUsService._staticInstance.GetAreasByState(stateID,brandID,onSuccess,onFailed,userContext); }
+Pulte08.AjaxWebServices.ContactUsService.GetCommunitiesByArea= function(areaID,brandID,onSuccess,onFailed,userContext) {Pulte08.AjaxWebServices.ContactUsService._staticInstance.GetCommunitiesByArea(areaID,brandID,onSuccess,onFailed,userContext); }
+Pulte08.AjaxWebServices.ContactUsService.GetCommunitiesByRegion= function(regionID,brandID,onSuccess,onFailed,userContext) {Pulte08.AjaxWebServices.ContactUsService._staticInstance.GetCommunitiesByRegion(regionID,brandID,onSuccess,onFailed,userContext); }
+var gtc = Sys.Net.WebServiceProxy._generateTypedConstructor;
+Type.registerNamespace('Pulte08.BusinessServices');
+if (typeof(Pulte08.BusinessServices.BusinessDescription) === 'undefined') {
+Pulte08.BusinessServices.BusinessDescription=gtc("Pulte08.BusinessServices.BusinessDescription");
+Pulte08.BusinessServices.BusinessDescription.registerClass('Pulte08.BusinessServices.BusinessDescription');
+}

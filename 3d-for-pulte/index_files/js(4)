@@ -1,0 +1,92 @@
+Type.registerNamespace('Pulte08.AjaxWebServices');
+Pulte08.AjaxWebServices.SavedProductsService=function() {
+Pulte08.AjaxWebServices.SavedProductsService.initializeBase(this);
+this._timeout = 0;
+this._userContext = null;
+this._succeeded = null;
+this._failed = null;
+}
+Pulte08.AjaxWebServices.SavedProductsService.prototype={
+_get_path:function() {
+ var p = this.get_path();
+ if (p) return p;
+ else return Pulte08.AjaxWebServices.SavedProductsService._staticInstance.get_path();},
+SaveProduct:function(notation,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'SaveProduct',false,{notation:notation},succeededCallback,failedCallback,userContext); },
+SaveCommunity:function(communityID,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'SaveCommunity',false,{communityID:communityID},succeededCallback,failedCallback,userContext); },
+SavePlan:function(planID,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'SavePlan',false,{planID:planID},succeededCallback,failedCallback,userContext); },
+SaveInventoryHome:function(inventoryHomeID,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'SaveInventoryHome',false,{inventoryHomeID:inventoryHomeID},succeededCallback,failedCallback,userContext); },
+SaveNotes:function(notation,notes,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'SaveNotes',false,{notation:notation,notes:notes},succeededCallback,failedCallback,userContext); },
+SavePlanNotes:function(planID,notes,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'SavePlanNotes',false,{planID:planID,notes:notes},succeededCallback,failedCallback,userContext); },
+SaveInventoryHomeNotes:function(homeID,notes,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'SaveInventoryHomeNotes',false,{homeID:homeID,notes:notes},succeededCallback,failedCallback,userContext); },
+RemoveProduct:function(notation,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'RemoveProduct',false,{notation:notation},succeededCallback,failedCallback,userContext); },
+RemoveCommunity:function(communityID,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'RemoveCommunity',false,{communityID:communityID},succeededCallback,failedCallback,userContext); },
+RemovePlan:function(planID,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'RemovePlan',false,{planID:planID},succeededCallback,failedCallback,userContext); },
+RemoveInventoryHome:function(inventoryHomeID,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'RemoveInventoryHome',false,{inventoryHomeID:inventoryHomeID},succeededCallback,failedCallback,userContext); },
+ClearAnonymousItems:function(succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'ClearAnonymousItems',false,{},succeededCallback,failedCallback,userContext); },
+IsFastPassMappable:function(fastPassURL,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'IsFastPassMappable',false,{fastPassURL:fastPassURL},succeededCallback,failedCallback,userContext); },
+GetPlanAddress:function(planID,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'GetPlanAddress',false,{planID:planID},succeededCallback,failedCallback,userContext); },
+SendSharedEmail:function(sendToEmail,fromFirstName,fromLastName,fromEmail,copyMe,productList,msg,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'SendSharedEmail',false,{sendToEmail:sendToEmail,fromFirstName:fromFirstName,fromLastName:fromLastName,fromEmail:fromEmail,copyMe:copyMe,productList:productList,msg:msg},succeededCallback,failedCallback,userContext); },
+RenderView:function(succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'RenderView',false,{},succeededCallback,failedCallback,userContext); },
+GetShareListHTML:function(succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'GetShareListHTML',false,{},succeededCallback,failedCallback,userContext); },
+GetCompareListHTML:function(succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'GetCompareListHTML',false,{},succeededCallback,failedCallback,userContext); }}
+Pulte08.AjaxWebServices.SavedProductsService.registerClass('Pulte08.AjaxWebServices.SavedProductsService',Sys.Net.WebServiceProxy);
+Pulte08.AjaxWebServices.SavedProductsService._staticInstance = new Pulte08.AjaxWebServices.SavedProductsService();
+Pulte08.AjaxWebServices.SavedProductsService.set_path = function(value) { Pulte08.AjaxWebServices.SavedProductsService._staticInstance.set_path(value); }
+Pulte08.AjaxWebServices.SavedProductsService.get_path = function() { return Pulte08.AjaxWebServices.SavedProductsService._staticInstance.get_path(); }
+Pulte08.AjaxWebServices.SavedProductsService.set_timeout = function(value) { Pulte08.AjaxWebServices.SavedProductsService._staticInstance.set_timeout(value); }
+Pulte08.AjaxWebServices.SavedProductsService.get_timeout = function() { return Pulte08.AjaxWebServices.SavedProductsService._staticInstance.get_timeout(); }
+Pulte08.AjaxWebServices.SavedProductsService.set_defaultUserContext = function(value) { Pulte08.AjaxWebServices.SavedProductsService._staticInstance.set_defaultUserContext(value); }
+Pulte08.AjaxWebServices.SavedProductsService.get_defaultUserContext = function() { return Pulte08.AjaxWebServices.SavedProductsService._staticInstance.get_defaultUserContext(); }
+Pulte08.AjaxWebServices.SavedProductsService.set_defaultSucceededCallback = function(value) { Pulte08.AjaxWebServices.SavedProductsService._staticInstance.set_defaultSucceededCallback(value); }
+Pulte08.AjaxWebServices.SavedProductsService.get_defaultSucceededCallback = function() { return Pulte08.AjaxWebServices.SavedProductsService._staticInstance.get_defaultSucceededCallback(); }
+Pulte08.AjaxWebServices.SavedProductsService.set_defaultFailedCallback = function(value) { Pulte08.AjaxWebServices.SavedProductsService._staticInstance.set_defaultFailedCallback(value); }
+Pulte08.AjaxWebServices.SavedProductsService.get_defaultFailedCallback = function() { return Pulte08.AjaxWebServices.SavedProductsService._staticInstance.get_defaultFailedCallback(); }
+Pulte08.AjaxWebServices.SavedProductsService.set_path("/AjaxWebServices/SavedProductsService.asmx");
+Pulte08.AjaxWebServices.SavedProductsService.SaveProduct= function(notation,onSuccess,onFailed,userContext) {Pulte08.AjaxWebServices.SavedProductsService._staticInstance.SaveProduct(notation,onSuccess,onFailed,userContext); }
+Pulte08.AjaxWebServices.SavedProductsService.SaveCommunity= function(communityID,onSuccess,onFailed,userContext) {Pulte08.AjaxWebServices.SavedProductsService._staticInstance.SaveCommunity(communityID,onSuccess,onFailed,userContext); }
+Pulte08.AjaxWebServices.SavedProductsService.SavePlan= function(planID,onSuccess,onFailed,userContext) {Pulte08.AjaxWebServices.SavedProductsService._staticInstance.SavePlan(planID,onSuccess,onFailed,userContext); }
+Pulte08.AjaxWebServices.SavedProductsService.SaveInventoryHome= function(inventoryHomeID,onSuccess,onFailed,userContext) {Pulte08.AjaxWebServices.SavedProductsService._staticInstance.SaveInventoryHome(inventoryHomeID,onSuccess,onFailed,userContext); }
+Pulte08.AjaxWebServices.SavedProductsService.SaveNotes= function(notation,notes,onSuccess,onFailed,userContext) {Pulte08.AjaxWebServices.SavedProductsService._staticInstance.SaveNotes(notation,notes,onSuccess,onFailed,userContext); }
+Pulte08.AjaxWebServices.SavedProductsService.SavePlanNotes= function(planID,notes,onSuccess,onFailed,userContext) {Pulte08.AjaxWebServices.SavedProductsService._staticInstance.SavePlanNotes(planID,notes,onSuccess,onFailed,userContext); }
+Pulte08.AjaxWebServices.SavedProductsService.SaveInventoryHomeNotes= function(homeID,notes,onSuccess,onFailed,userContext) {Pulte08.AjaxWebServices.SavedProductsService._staticInstance.SaveInventoryHomeNotes(homeID,notes,onSuccess,onFailed,userContext); }
+Pulte08.AjaxWebServices.SavedProductsService.RemoveProduct= function(notation,onSuccess,onFailed,userContext) {Pulte08.AjaxWebServices.SavedProductsService._staticInstance.RemoveProduct(notation,onSuccess,onFailed,userContext); }
+Pulte08.AjaxWebServices.SavedProductsService.RemoveCommunity= function(communityID,onSuccess,onFailed,userContext) {Pulte08.AjaxWebServices.SavedProductsService._staticInstance.RemoveCommunity(communityID,onSuccess,onFailed,userContext); }
+Pulte08.AjaxWebServices.SavedProductsService.RemovePlan= function(planID,onSuccess,onFailed,userContext) {Pulte08.AjaxWebServices.SavedProductsService._staticInstance.RemovePlan(planID,onSuccess,onFailed,userContext); }
+Pulte08.AjaxWebServices.SavedProductsService.RemoveInventoryHome= function(inventoryHomeID,onSuccess,onFailed,userContext) {Pulte08.AjaxWebServices.SavedProductsService._staticInstance.RemoveInventoryHome(inventoryHomeID,onSuccess,onFailed,userContext); }
+Pulte08.AjaxWebServices.SavedProductsService.ClearAnonymousItems= function(onSuccess,onFailed,userContext) {Pulte08.AjaxWebServices.SavedProductsService._staticInstance.ClearAnonymousItems(onSuccess,onFailed,userContext); }
+Pulte08.AjaxWebServices.SavedProductsService.IsFastPassMappable= function(fastPassURL,onSuccess,onFailed,userContext) {Pulte08.AjaxWebServices.SavedProductsService._staticInstance.IsFastPassMappable(fastPassURL,onSuccess,onFailed,userContext); }
+Pulte08.AjaxWebServices.SavedProductsService.GetPlanAddress= function(planID,onSuccess,onFailed,userContext) {Pulte08.AjaxWebServices.SavedProductsService._staticInstance.GetPlanAddress(planID,onSuccess,onFailed,userContext); }
+Pulte08.AjaxWebServices.SavedProductsService.SendSharedEmail= function(sendToEmail,fromFirstName,fromLastName,fromEmail,copyMe,productList,msg,onSuccess,onFailed,userContext) {Pulte08.AjaxWebServices.SavedProductsService._staticInstance.SendSharedEmail(sendToEmail,fromFirstName,fromLastName,fromEmail,copyMe,productList,msg,onSuccess,onFailed,userContext); }
+Pulte08.AjaxWebServices.SavedProductsService.RenderView= function(onSuccess,onFailed,userContext) {Pulte08.AjaxWebServices.SavedProductsService._staticInstance.RenderView(onSuccess,onFailed,userContext); }
+Pulte08.AjaxWebServices.SavedProductsService.GetShareListHTML= function(onSuccess,onFailed,userContext) {Pulte08.AjaxWebServices.SavedProductsService._staticInstance.GetShareListHTML(onSuccess,onFailed,userContext); }
+Pulte08.AjaxWebServices.SavedProductsService.GetCompareListHTML= function(onSuccess,onFailed,userContext) {Pulte08.AjaxWebServices.SavedProductsService._staticInstance.GetCompareListHTML(onSuccess,onFailed,userContext); }
+var gtc = Sys.Net.WebServiceProxy._generateTypedConstructor;
+Type.registerNamespace('Pulte08.BusinessServices');
+if (typeof(Pulte08.BusinessServices.BusinessAddress) === 'undefined') {
+Pulte08.BusinessServices.BusinessAddress=gtc("Pulte08.BusinessServices.BusinessAddress");
+Pulte08.BusinessServices.BusinessAddress.registerClass('Pulte08.BusinessServices.BusinessAddress');
+}
+Type.registerNamespace('Pulte08.BusinessServices.User');
+if (typeof(Pulte08.BusinessServices.User.enumSaveData) === 'undefined') {
+Pulte08.BusinessServices.User.enumSaveData = function() { throw Error.invalidOperation(); }
+Pulte08.BusinessServices.User.enumSaveData.prototype = {SAVE_SUCCESS: 0,SAVE_FAILURE: 1,SAVE_COOKIE_FULL: 2,SAVE_NOT_SIGNED_IN: 3}
+Pulte08.BusinessServices.User.enumSaveData.registerEnum('Pulte08.BusinessServices.User.enumSaveData', true);
+}

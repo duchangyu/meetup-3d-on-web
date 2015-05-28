@@ -1,0 +1,47 @@
+Type.registerNamespace('Pulte08.AjaxWebServices');
+Pulte08.AjaxWebServices.RecentlyViewedService=function() {
+Pulte08.AjaxWebServices.RecentlyViewedService.initializeBase(this);
+this._timeout = 0;
+this._userContext = null;
+this._succeeded = null;
+this._failed = null;
+}
+Pulte08.AjaxWebServices.RecentlyViewedService.prototype={
+_get_path:function() {
+ var p = this.get_path();
+ if (p) return p;
+ else return Pulte08.AjaxWebServices.RecentlyViewedService._staticInstance.get_path();},
+SaveProduct:function(notation,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'SaveProduct',false,{notation:notation},succeededCallback,failedCallback,userContext); },
+SaveCommunity:function(communityID,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'SaveCommunity',false,{communityID:communityID},succeededCallback,failedCallback,userContext); },
+SavePlan:function(planID,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'SavePlan',false,{planID:planID},succeededCallback,failedCallback,userContext); },
+SaveInventoryHome:function(invHomeID,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'SaveInventoryHome',false,{invHomeID:invHomeID},succeededCallback,failedCallback,userContext); },
+RenderView:function(succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'RenderView',false,{},succeededCallback,failedCallback,userContext); }}
+Pulte08.AjaxWebServices.RecentlyViewedService.registerClass('Pulte08.AjaxWebServices.RecentlyViewedService',Sys.Net.WebServiceProxy);
+Pulte08.AjaxWebServices.RecentlyViewedService._staticInstance = new Pulte08.AjaxWebServices.RecentlyViewedService();
+Pulte08.AjaxWebServices.RecentlyViewedService.set_path = function(value) { Pulte08.AjaxWebServices.RecentlyViewedService._staticInstance.set_path(value); }
+Pulte08.AjaxWebServices.RecentlyViewedService.get_path = function() { return Pulte08.AjaxWebServices.RecentlyViewedService._staticInstance.get_path(); }
+Pulte08.AjaxWebServices.RecentlyViewedService.set_timeout = function(value) { Pulte08.AjaxWebServices.RecentlyViewedService._staticInstance.set_timeout(value); }
+Pulte08.AjaxWebServices.RecentlyViewedService.get_timeout = function() { return Pulte08.AjaxWebServices.RecentlyViewedService._staticInstance.get_timeout(); }
+Pulte08.AjaxWebServices.RecentlyViewedService.set_defaultUserContext = function(value) { Pulte08.AjaxWebServices.RecentlyViewedService._staticInstance.set_defaultUserContext(value); }
+Pulte08.AjaxWebServices.RecentlyViewedService.get_defaultUserContext = function() { return Pulte08.AjaxWebServices.RecentlyViewedService._staticInstance.get_defaultUserContext(); }
+Pulte08.AjaxWebServices.RecentlyViewedService.set_defaultSucceededCallback = function(value) { Pulte08.AjaxWebServices.RecentlyViewedService._staticInstance.set_defaultSucceededCallback(value); }
+Pulte08.AjaxWebServices.RecentlyViewedService.get_defaultSucceededCallback = function() { return Pulte08.AjaxWebServices.RecentlyViewedService._staticInstance.get_defaultSucceededCallback(); }
+Pulte08.AjaxWebServices.RecentlyViewedService.set_defaultFailedCallback = function(value) { Pulte08.AjaxWebServices.RecentlyViewedService._staticInstance.set_defaultFailedCallback(value); }
+Pulte08.AjaxWebServices.RecentlyViewedService.get_defaultFailedCallback = function() { return Pulte08.AjaxWebServices.RecentlyViewedService._staticInstance.get_defaultFailedCallback(); }
+Pulte08.AjaxWebServices.RecentlyViewedService.set_path("/AjaxWebServices/RecentlyViewedService.asmx");
+Pulte08.AjaxWebServices.RecentlyViewedService.SaveProduct= function(notation,onSuccess,onFailed,userContext) {Pulte08.AjaxWebServices.RecentlyViewedService._staticInstance.SaveProduct(notation,onSuccess,onFailed,userContext); }
+Pulte08.AjaxWebServices.RecentlyViewedService.SaveCommunity= function(communityID,onSuccess,onFailed,userContext) {Pulte08.AjaxWebServices.RecentlyViewedService._staticInstance.SaveCommunity(communityID,onSuccess,onFailed,userContext); }
+Pulte08.AjaxWebServices.RecentlyViewedService.SavePlan= function(planID,onSuccess,onFailed,userContext) {Pulte08.AjaxWebServices.RecentlyViewedService._staticInstance.SavePlan(planID,onSuccess,onFailed,userContext); }
+Pulte08.AjaxWebServices.RecentlyViewedService.SaveInventoryHome= function(invHomeID,onSuccess,onFailed,userContext) {Pulte08.AjaxWebServices.RecentlyViewedService._staticInstance.SaveInventoryHome(invHomeID,onSuccess,onFailed,userContext); }
+Pulte08.AjaxWebServices.RecentlyViewedService.RenderView= function(onSuccess,onFailed,userContext) {Pulte08.AjaxWebServices.RecentlyViewedService._staticInstance.RenderView(onSuccess,onFailed,userContext); }
+Type.registerNamespace('Pulte08.BusinessServices.User');
+if (typeof(Pulte08.BusinessServices.User.enumSaveData) === 'undefined') {
+Pulte08.BusinessServices.User.enumSaveData = function() { throw Error.invalidOperation(); }
+Pulte08.BusinessServices.User.enumSaveData.prototype = {SAVE_SUCCESS: 0,SAVE_FAILURE: 1,SAVE_COOKIE_FULL: 2,SAVE_NOT_SIGNED_IN: 3}
+Pulte08.BusinessServices.User.enumSaveData.registerEnum('Pulte08.BusinessServices.User.enumSaveData', true);
+}

@@ -1,0 +1,35 @@
+Type.registerNamespace('Pulte08.AjaxWebServices');
+Pulte08.AjaxWebServices.TellAFriendService=function() {
+Pulte08.AjaxWebServices.TellAFriendService.initializeBase(this);
+this._timeout = 0;
+this._userContext = null;
+this._succeeded = null;
+this._failed = null;
+}
+Pulte08.AjaxWebServices.TellAFriendService.prototype={
+_get_path:function() {
+ var p = this.get_path();
+ if (p) return p;
+ else return Pulte08.AjaxWebServices.TellAFriendService._staticInstance.get_path();},
+SendTellAFriend:function(siteID,communityID,homePlanID,friendsEmail,yourFirstName,yourLastName,yourEmail,sendMeACopy,message,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'SendTellAFriend',false,{siteID:siteID,communityID:communityID,homePlanID:homePlanID,friendsEmail:friendsEmail,yourFirstName:yourFirstName,yourLastName:yourLastName,yourEmail:yourEmail,sendMeACopy:sendMeACopy,message:message},succeededCallback,failedCallback,userContext); },
+SendReferral:function(siteID,communityID,friendsName,friendsEmail,yourFirstName,yourLastName,state,message,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'SendReferral',false,{siteID:siteID,communityID:communityID,friendsName:friendsName,friendsEmail:friendsEmail,yourFirstName:yourFirstName,yourLastName:yourLastName,state:state,message:message},succeededCallback,failedCallback,userContext); },
+SendHomeownerReferral:function(siteID,brandName,friendsName,friendsEmail,friendsState,yourFirstName,yourLastName,yourState,message,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'SendHomeownerReferral',false,{siteID:siteID,brandName:brandName,friendsName:friendsName,friendsEmail:friendsEmail,friendsState:friendsState,yourFirstName:yourFirstName,yourLastName:yourLastName,yourState:yourState,message:message},succeededCallback,failedCallback,userContext); }}
+Pulte08.AjaxWebServices.TellAFriendService.registerClass('Pulte08.AjaxWebServices.TellAFriendService',Sys.Net.WebServiceProxy);
+Pulte08.AjaxWebServices.TellAFriendService._staticInstance = new Pulte08.AjaxWebServices.TellAFriendService();
+Pulte08.AjaxWebServices.TellAFriendService.set_path = function(value) { Pulte08.AjaxWebServices.TellAFriendService._staticInstance.set_path(value); }
+Pulte08.AjaxWebServices.TellAFriendService.get_path = function() { return Pulte08.AjaxWebServices.TellAFriendService._staticInstance.get_path(); }
+Pulte08.AjaxWebServices.TellAFriendService.set_timeout = function(value) { Pulte08.AjaxWebServices.TellAFriendService._staticInstance.set_timeout(value); }
+Pulte08.AjaxWebServices.TellAFriendService.get_timeout = function() { return Pulte08.AjaxWebServices.TellAFriendService._staticInstance.get_timeout(); }
+Pulte08.AjaxWebServices.TellAFriendService.set_defaultUserContext = function(value) { Pulte08.AjaxWebServices.TellAFriendService._staticInstance.set_defaultUserContext(value); }
+Pulte08.AjaxWebServices.TellAFriendService.get_defaultUserContext = function() { return Pulte08.AjaxWebServices.TellAFriendService._staticInstance.get_defaultUserContext(); }
+Pulte08.AjaxWebServices.TellAFriendService.set_defaultSucceededCallback = function(value) { Pulte08.AjaxWebServices.TellAFriendService._staticInstance.set_defaultSucceededCallback(value); }
+Pulte08.AjaxWebServices.TellAFriendService.get_defaultSucceededCallback = function() { return Pulte08.AjaxWebServices.TellAFriendService._staticInstance.get_defaultSucceededCallback(); }
+Pulte08.AjaxWebServices.TellAFriendService.set_defaultFailedCallback = function(value) { Pulte08.AjaxWebServices.TellAFriendService._staticInstance.set_defaultFailedCallback(value); }
+Pulte08.AjaxWebServices.TellAFriendService.get_defaultFailedCallback = function() { return Pulte08.AjaxWebServices.TellAFriendService._staticInstance.get_defaultFailedCallback(); }
+Pulte08.AjaxWebServices.TellAFriendService.set_path("/AjaxWebServices/TellAFriendService.asmx");
+Pulte08.AjaxWebServices.TellAFriendService.SendTellAFriend= function(siteID,communityID,homePlanID,friendsEmail,yourFirstName,yourLastName,yourEmail,sendMeACopy,message,onSuccess,onFailed,userContext) {Pulte08.AjaxWebServices.TellAFriendService._staticInstance.SendTellAFriend(siteID,communityID,homePlanID,friendsEmail,yourFirstName,yourLastName,yourEmail,sendMeACopy,message,onSuccess,onFailed,userContext); }
+Pulte08.AjaxWebServices.TellAFriendService.SendReferral= function(siteID,communityID,friendsName,friendsEmail,yourFirstName,yourLastName,state,message,onSuccess,onFailed,userContext) {Pulte08.AjaxWebServices.TellAFriendService._staticInstance.SendReferral(siteID,communityID,friendsName,friendsEmail,yourFirstName,yourLastName,state,message,onSuccess,onFailed,userContext); }
+Pulte08.AjaxWebServices.TellAFriendService.SendHomeownerReferral= function(siteID,brandName,friendsName,friendsEmail,friendsState,yourFirstName,yourLastName,yourState,message,onSuccess,onFailed,userContext) {Pulte08.AjaxWebServices.TellAFriendService._staticInstance.SendHomeownerReferral(siteID,brandName,friendsName,friendsEmail,friendsState,yourFirstName,yourLastName,yourState,message,onSuccess,onFailed,userContext); }
