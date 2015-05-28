@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="zh">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>3D Content on Web</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+        
+        <!--font awesome-->
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        
+        <!-- bootstrap -->
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+                <section>
+                    
+                    <h2>Web和移动设备上浏览3D数据</h2>
+                    
+                    <a href="https://internal.autodesk360beta.com/shares/public/SH5a730QTbf0022d07514a5b2cd22824c99f">
+                    <img src="img/cover.jpg"></a>
+
+                </section>
+
+                <section>
+                    <h2>About Me</h2>
+                    <p>Daniel Du</p>
+                    <p>Developer Evangelist @ Autodesk</p>
+                    <p><i class="fa fa-weibo fa-fw"></i><a href="http://www.weibo.com/junqilian">杜长宇Daniel </a> </p>
+                    <p><i class="fa fa-linkedin"></i><a href="https://www.linkedin.com/pub/daniel-du/18/653/b89"> Linkedin</a>  </p>
+                    <p><i class="fa fa-twitter fa-fw"></i> @daniel_du</p>
+                    <br><br>
+                    
+                </section>
+
+                <section>
+                    <h2>3D on Web - cool demos</h2>
+                    
+                    <div style="text-align:left">
+
+
+				    <div style="padding-left: 24px; padding-top: 8px; position: relative; font-size: 13px;">
+				      <img src="http://www.google.com/s2/favicons?domain=www.iamnop.com" style="vertical-align: middle; width:16px; height:16px">
+				      <a style="vertical-align: middle; padding-left: 10px; padding-right: 12px; text-decoration: none;" href="http://www.iamnop.com/particles/">A Particle Dream - v1.1</a>
+				    </div>
+
+				  
+				    <div style="padding-left: 24px; padding-top: 8px; position: relative; font-size: 13px;">
+				      <img src="http://www.google.com/s2/favicons?domain=lights.helloenjoy.com" style="vertical-align: middle; width:16px; height:16px">
+				      <a style="vertical-align: middle; padding-left: 10px; padding-right: 12px; text-decoration: none;" href="http://lights.helloenjoy.com/">Lights</a>
+				    </div>
+
+				  
+				    <div style="padding-left: 24px; padding-top: 8px; position: relative; font-size: 13px;">
+				      <img src="http://www.google.com/s2/favicons?domain=www.visualiser.fr" style="vertical-align: middle; width:16px; height:16px">
+				      <a style="vertical-align: middle; padding-left: 10px; padding-right: 12px; text-decoration: none;" href="http://www.visualiser.fr/Babylon/character/default.htm">Character Study - Babylon.js - Samuel Girardin -</a>
+				    </div>
+
+				  
+				    <div style="padding-left: 24px; padding-top: 8px; position: relative; font-size: 13px;">
+				      <img src="http://www.google.com/s2/favicons?domain=seemore.playcanvas.com" style="vertical-align: middle; width:16px; height:16px">
+				      <a style="vertical-align: middle; padding-left: 10px; padding-right: 12px; text-decoration: none;" href="http://seemore.playcanvas.com/">PlayCanvas</a>
+				    </div>
+
+				  
+				    <div style="padding-left: 24px; padding-top: 8px; position: relative; font-size: 13px;">
+				      <img src="http://www.google.com/s2/favicons?domain=calm-inlet-4387.herokuapp.com" style="vertical-align: middle; width:16px; height:16px">
+				      <a style="vertical-align: middle; padding-left: 10px; padding-right: 12px; text-decoration: none;" href="https://calm-inlet-4387.herokuapp.com/">LMV Nav Test</a>
+				    </div>
+
+				  
+				    <div style="padding-left: 24px; padding-top: 8px; position: relative; font-size: 13px;">
+				      <img src="http://www.google.com/s2/favicons?domain=lmv.rocks" style="vertical-align: middle; width:16px; height:16px">
+				      <a style="vertical-align: middle; padding-left: 10px; padding-right: 12px; text-decoration: none;" href="http://lmv.rocks/">Viewing Application Demo</a>
+				    </div>
+
+				  
+				    <div style="padding-left: 24px; padding-top: 8px; position: relative; font-size: 13px;">
+				      <img src="http://www.google.com/s2/favicons?domain=customizer.pennyskateboards.com" style="vertical-align: middle; width:16px; height:16px">
+				      <a style="vertical-align: middle; padding-left: 10px; padding-right: 12px; text-decoration: none;" href="http://customizer.pennyskateboards.com/au/">3D Penny Customiser | Build Custom Skateboards Australia</a>
+				    </div>
+
+				  
+				    <div style="padding-left: 24px; padding-top: 8px; position: relative; font-size: 13px;">
+				      <img src="http://www.google.com/s2/favicons?domain=sketchfab.com" style="vertical-align: middle; width:16px; height:16px">
+				      <a style="vertical-align: middle; padding-left: 10px; padding-right: 12px; text-decoration: none;" href="https://sketchfab.com/">Sketchfab - The Easiest Way to Share Your 3D Models</a>
+				    </div>
+
+				  
+				    <div style="padding-left: 24px; padding-top: 8px; position: relative; font-size: 13px;">
+				      <img src="http://www.google.com/s2/favicons?domain=www.cl3ver.com" style="vertical-align: middle; width:16px; height:16px">
+				      <a style="vertical-align: middle; padding-left: 10px; padding-right: 12px; text-decoration: none;" href="http://www.cl3ver.com/">Platform for interactive 3D presentations</a>
+				    </div>
+
+
+                  </div>
+        
+                    
+                </section>
+
+				<section>
+                    
+                    <h2>Web上浏览3D数据</h2>
+                    
+                    <p>你觉得这个太难实现或者为时尚早吗？</p>
+                    <p>不，其实很简单，而且正是时候</p>
+                </section>
+
+                <section>
+                    
+                    <h2>Demo</h2>
+                    <p>
+                   <li><a href="http://www.cat.com/en_US/products/new/equipment/dozers/small-dozers/18267751.html">通过照片、示意图卖机械</a></li>
+
+                   	<li><a href="http://viewer.autodesk.io/node/gallery/#/viewer?id=54464d47af600b5c0a872553">三维机械模型</a></li>
+                   	</p>
+
+                   	<p>
+                   <li><a href="http://www.pulte.com/communities/CA/roseville/Primros/floor-plans/683809/Residence-2.aspx#.VJYmQ8ABD">通过户型图卖房子</a></li>
+
+                    <li><a href="http://calm-inlet-4387.herokuapp.com/">三维建筑模型</a></li>
+                   	</p>
+
+                   	<p>
+                   <li><a href="http://item.taobao.com/item.htm?spm=a230r.1.14.62.aBJFlx&id=45623953224&ns=1&abbucket=2#detail">通过照片卖产品</a></li>
+
+                    <li><a href="3d-on-taobao/index.html">淘宝+  ？？</a></li>
+                   	</p>
+
+                </section>
+           
+ 
+
+                <section>
+                    <h2>我要上三维，告诉我怎么做？</h2>
+                    <p class="fragment">答案就是</p>
+                    <div class="fragment">
+                        <h2>WebGL</h2>
+                      
+                    </div>
+      
+                </section>
+               
+                
+                <section>
+                    <h2>WebGL</h2>
+                    <p class="fragment">无需任何插件</p>
+                    <div class="fragment">
+                        <p>几乎所有现代浏览器都支持</p>
+                        <img src="img/supported-browsers.png">
+                    </div>
+      
+                </section>
+
+
+                
+                <section>
+                    <h2>有没有更简单的...</h2>
+                    <p class="fragment">Autodesk发布了一款在线模型浏览器</p>
+                    <div class="row">
+                        <div class="col-xs-6 fragment">
+                            <h1><i class="fa fa-cloud-upload"></i></h1>
+                            <p>上传你的模型</p>
+                            
+                        </div>
+                        <div class="col-xs-6 fragment">
+                            <h1><i class="fa fa-desktop"></i></h1>
+                            <p>在浏览器和移动设备中浏览</p>
+                            
+                        </div>
+                    </div>
+                    <p class="fragment">简单、而且免费使用!</p>
+                </section>
+                
+             
+                
+                <section>
+                    <h2>什么东东？ 现在试试...</h2>
+                    <a href="https://360.autodesk.com/viewer">https://360.autodesk.com/viewer</a>
+                </section>
+                
+                
+                
+                <section>
+                    <h2>支持的数据格式</h2>
+                    <p>ipt, neu, stla, stl, xlsx, jt, jpg, skp, prt, dwf, xls, png, sldasm, step, dwg, zip, nwc, model, sim, stp, ste, f3d, pdf, iges, dwt, catproduct, csv, igs, sldprt, cgr, 3dm, sab, obj, pptx, cam360, jpeg, bmp, gbxml, exp, ppt, doc, wire, ige, rcp, txt, dae, x_b, 3ds, rtf, rvt, g, sim360, iam, asm, dlv3, x_t, pps, session, xas, xpr, docx, catpart, stlb, tiff, nwd, sat, fbx, smb, smt, ifc, dwfx, tif</p>
+                    <p>还在继续增加中...</p>
+                </section>
+
+                <section>
+                    <h2>还提供编程接口 </h2>
+                    <p>View and Data API</p>
+                    <div class="col-xs-6 fragment">
+                            <h1><i class="fa fa-cloud-upload"></i></h1>
+                          
+                            <p>REST API</p>
+                            <p>
+                            <ul>
+                            	<li>身份认证</li>
+                            	<li>模型上传</li>
+                            	<li>格式转换</li>
+                            	
+                            </ul>
+                        	</p>
+                        </div>
+                        <div class="col-xs-6 fragment">
+                            <h1><i class="fa fa-desktop"></i></h1>
+                        
+                            <p>JavaScript API</p>
+                            <ul>
+                            	<li>相机控制</li>
+                            	<li>获取属性信息</li>
+                            	<li>用户事件处理</li>
+                            	<li>属性信息搜索</li>
+		                        <li>自定义用户界面</li>
+		                        <li>...</li>
+                            </ul>
+                        </div>
+
+                        <p class="fragment"><i class="fa fa-github"></i>还有众多<a href="http://developer-autodesk.github.io/">示例程序</a>供您学习参考!
+                        </p>
+
+                </section>
+
+
+                <section>
+                    <h2>可能的应用场景</h2>
+                    <p  class="fragment">物业管理</p>
+                    <p class="fragment">电子商务商品展示</p>
+                    <p class="fragment">展品在线虚拟体验</p>
+                    <p class="fragment">生产管理、设备运行监控</p>
+                    <p class="fragment">游戏、虚拟现实</p>
+                    <p class="fragment">...</p>
+                </section>
+
+                <section>
+                    <h2>谁在用View and Data API?</h2>
+                    <img src="img/who_is_using.jpg">
+                </section>
+
+
+                
+                <section>
+                    <h2>现在就开始</h2>
+                    <p><a href="http://developer.autodesk.com">注册一个你的App</a></p>
+
+                    <a href="http://developer-autodesk.github.io/">github上n多示例代码</a>
+ 
+                </section>
+
+                <section>
+                    <h2>我们的云助力活动</h2>
+                    <p><a href="http://www.autodesk.com.cn/adsk/servlet/item?siteID=1170359&id=24118442">
+                        <img src="http://images.autodesk.com/apac_grtrchina_main/images/adn_autodesk_fusion_360_banner_image_cn.jpg">
+                        </a>
+                    </p>
+
+              
+ 
+                </section>
+
+
+
+<!--                 <section>
+                    <h2>详细看看 View and Data API</h2>
+                    <p><a href="http://developer-autodesk.github.io/LmvQuickStart/">服务器端REST API</a></p>
+
+                    <a href="http://lmvdbg.iab.app42paas.com/">客户端JavaScript API</a>
+ 
+                </section> 
+
+                <section>
+                    <h2>View and Data API 服务器端REST API</h2>
+                    
+                    <ul>
+                        <li>身份认证</li>
+                        <li>模型上传</li>
+                        <li>模型格式转换</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>View and Data API 客户端JavaScript API</h2>
+                    
+                    <ul>
+                        <li>创建浏览器端viewer</li>
+                        <li>相机控制</li>
+                        <li>获取属性信息</li>
+                        <li>用户事件处理</li>
+                        <li>属性信息搜索</li>
+                        <li>自定义UI</li>
+                        <li>...</li>
+                    </ul>
+                </section>
+-->
+
+                <section>
+                    <h2>关注我们的微信公众号</h2>
+                     
+                     <div class="col-xs-6 ">
+                        <img class="img img-responsive" src="img/AutodeskADN-Wechat.jpg" >
+                     </div>
+ 					 <div class="col-xs-6">
+                        <p> AutodeskADN</p>
+                     </div>
+                </section>
+
+                <section>
+                    <h2>保持联系</h2>
+                    <p><i class="fa fa-weibo fa-fw"></i><a href="http://www.weibo.com/junqilian">杜长宇Daniel </a> </p>
+                    <p><i class="fa fa-linkedin"></i><a href="https://www.linkedin.com/pub/daniel-du/18/653/b89"> Linkedin</a>  </p>
+                    <p><i class="fa fa-twitter fa-fw"></i> @daniel_du</p>
+                    <p><i class="fa fa-envelope-o"></i><a href="mailto:daniel.du@autodesk.com">给我发邮件</a></p>
+                    
+                </section>
+
+                <section>
+                     <img src="img/Autodesk-logo.png" width="50%">
+
+                </section>
+                
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'none', // none/fade/slide/convex/concave/zoom
+                backgroundTransition: 'none',
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
