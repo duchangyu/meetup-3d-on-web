@@ -1,3 +1,0 @@
-/* B3/LightningBolt_Container_Data_Default - default */
-try {}
-catch (e) { if (isInDebug) { console.log(e); } }
