@@ -1,67 +1,53 @@
 <!doctype html>
 <html lang="zh">
+    <head>
+        <meta charset="utf-8">
+        <title>3D Content on Web</title>
+        <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+        <meta name="author" content="Hakim El Hattab">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/white.css" id="theme">
+        <!-- Code syntax highlighting -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+        <!-- Printing and PDF exports -->
+        <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
 
-	<head>
-		<meta charset="utf-8">
-
-		<title>3D Content on Web</title>
-
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
-
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/white.css" id="theme">
-
-		<!-- Code syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
-
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-        
         <!--font awesome-->
         <!-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"> -->
         <link rel="stylesheet" href="lib/font/font-awesome-4.4.0/css/font-awesome.min.css">
-        
-        
+
+
         <!-- bootstrap -->
         <!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet"> -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
-
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
-	</head>
-
-	<body>
-
-		<div class="reveal">
-
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <div class="reveal">
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+            <section>
                 <section data-transition="slide">
-                    
+
                     <h2>HTML5 + WebGL的应用实践</h2>
                     <h4>-- 无插件的超大三维模型浏览技术及其API</h4>
-
                     <br/>
                     <p>杜长宇</p>
-                    
+
                     <!-- <a href="http://lmv.rocks/viewer/?url=http://lmv.rocks/data/aventador/aventador.svf">
                     <img src="img/car.png"></a> -->
-
                 </section>
-
                 <section data-transition="slide">
                     <h2>About Me</h2>
                     <p>杜长宇 Daniel Du</p>
@@ -72,150 +58,121 @@
                     <p><i class="fa fa-linkedin"></i><a href="https://www.linkedin.com/pub/daniel-du/18/653/b89"> Linkedin</a>  </p>
                     <p><i class="fa fa-twitter fa-fw"></i> @daniel_du</p>
                     <br><br>
-                    
+
                     <aside class="notes">
                         Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
                     </aside>
-
                 </section>
-
-             <!--    <section data-transition="slide">
-                    <p class="fragment grow">grow</p>
-                    <p class="fragment shrink">shrink</p>
-                    <p class="fragment fade-out">fade-out</p>
-                    <p class="fragment current-visible">visible only once</p>
-                    <p class="fragment highlight-current-blue">blue only once</p>
-                    <p class="fragment highlight-red">highlight-red</p>
-                    <p class="fragment highlight-green">highlight-green</p>
-                    <p class="fragment highlight-blue">highlight-blue</p>
-
-                    互联网这个青涩的平胸萝莉已经成长为傲立多尊的立体女神，找两个妹子图
+                <!--    <section data-transition="slide">
+                                        <p class="fragment grow">grow</p>
+                                        <p class="fragment shrink">shrink</p>
+                                        <p class="fragment fade-out">fade-out</p>
+                                        <p class="fragment current-visible">visible only once</p>
+                                        <p class="fragment highlight-current-blue">blue only once</p>
+                                        <p class="fragment highlight-red">highlight-red</p>
+                                        <p class="fragment highlight-green">highlight-green</p>
+                                        <p class="fragment highlight-blue">highlight-blue</p>
+                                        互联网这个青涩的平胸萝莉已经成长为傲立多尊的立体女神，找两个妹子图
                 </section> -->
-              
-                <section data-transition="slide">
 
+                <section data-transition="slide">
                     <p>让我们先轻松一下，静心欣赏</p>
-
                 </section>
-
                 <section data-transition="slide">
-
                     <!-- <iframe class="stretch" data-src="http://www.iamnop.com/particles/"></iframe> -->
                     <img  class="img-responsive img-rounded" src="img/partical.png">
                     <p><a href="http://www.iamnop.com/particles/"> Click Here for Demo </a></p>
-
-
+                    <p><a href="videos/particles.mov"> Video </a></p>
                 </section>
-
                 <section data-transition="slide">
-
                     <!-- <iframe class="stretch" data-src="http://lights.helloenjoy.com/"></iframe> -->
-
                     <img  class="img-responsive img-rounded" src="img/lights.png">
                     <p><a href="http://lights.helloenjoy.com/"> Click Here for Demo </a></p>
-
+                    <p><a href="videos/lights.mov"> Video </a></p>
                 </section>
 
- 
-
                 <section data-transition="slide">
-
                     <!-- <iframe class="stretch" data-src="http://www.visualiser.fr/Babylon/character/default.htm"></iframe>
- -->
-                      <img  class="img-responsive img-rounded" src="img/Babylon.png">
+                    -->
+                    <img  class="img-responsive img-rounded" src="img/Babylon.png">
                     <p><a href="http://www.visualiser.fr/Babylon/character/default.htm"> Click Here for Demo </a></p>
-
+                    <p><a href="videos/babylon.mov"> Video </a></p>
                 </section>
 
-                
-
-
                 <section data-transition="slide">
-
                     <!-- <iframe class="stretch" data-src="http://customizer.pennyskateboards.com/au"></iframe> -->
-
-                      <img  class="img-responsive img-rounded" src="img/penny.png">
+                    <img  class="img-responsive img-rounded" src="img/penny.png">
                     <p><a href="http://customizer.pennyskateboards.com/au"> Click Here for Demo </a></p>
-
+                    <p><a href="videos/skate.mov"> Video </a></p>
                 </section>
-
                 <section data-transition="slide">
-
                     <!-- <iframe class="stretch" data-src="https://sketchfab.com/"></iframe> -->
-
-                      <img  class="img-responsive img-rounded" src="img/sketchfab.png">
+                    <img  class="img img-responsive img-rounded" src="img/sketchfab.png">
                     <p><a href="https://sketchfab.com/"> Click Here for Demo </a></p>
-
-                </section>
-                
-
-
-                <section data-transition="slide">
-
-                     <img  class="img-responsive img-rounded" src="img/clever-building.png">
-                    <p><a href="http://3d.cl3ver.com/uWfsD?tryitlocation=3"> Click Here for Demo </a></p>
-
+                    <p><a href="videos/sketchfab.mov"> Video </a></p>
                 </section>
 
                 <section data-transition="slide">
-
+                    <img  class="img-responsive img-rounded" src="img/clever-building.png">
+                    <p><a href="http://3d.cl3ver.com/uWfsD?tryitlocation=3"> Click Here for Demo -AEC </a> | <a href="http://3d.cl3ver.com/lkSOt?tryitlocation=0"> Click Here for Demo -car </a></p>
+                    <p><a href="videos/clever-aec.mov"> Video - AEC </a> | <a href="videos/clever-car.mov"> Video - AEC </a></p>
+                </section>
+                <section data-transition="slide">
                     <!-- <iframe class="stretch" data-src="https://calm-inlet-4387.herokuapp.com/"></iframe> -->
-                    
-                     <img  class="img-responsive img-rounded" src="img/lmv-nav-test.png">
 
+                    <img  class="img-responsive img-rounded" src="img/lmv-nav-test.png">
                     <p><a href="https://calm-inlet-4387.herokuapp.com/"> Click Here for Demo </a></p>
-
+                    <p><a href="videos/lmv-nav.mov"> Video </a></p>
                 </section>
-
-
-	<!-- 			<section data-transition="slide">
-                    
-                    <h2>Web上浏览3D数据</h2>
-                    
-                    <p>你觉得这个太难实现或者为时尚早吗？</p>
-                    <p>不，其实不那么难，而且正是时候</p>
+                <!--            <section data-transition="slide">
+                        
+                        <h2>Web上浏览3D数据</h2>
+                        
+                        <p>你觉得这个太难实现或者为时尚早吗？</p>
+                        <p>不，其实不那么难，而且正是时候</p>
                 </section> -->
-
                 <section data-transition="slide">
-                    
+
                     <h2>二维还是三维，你要哪个？</h2>
                     <p>
-                   <li><a href="http://www.cat.com/en_US/products/new/equipment/dozers/small-dozers/18267751.html">通过照片、示意图卖机械</a></li>
-
-                   	<li><a href="3d-for-d4kz/index.html">三维机械模型卖机械</a></li>
-                   	</p>
-
-                   	<p>
-                   <li><a href="http://www.pulte.com/communities/CA/roseville/Primros/floor-plans/683809/Residence-2.aspx#.VJYmQ8ABD">通过户型图卖房子</a></li>
-
-                    <li><a href="3d-for-pulte/index.html">三维建筑模型卖房子</a></li>
-                   	</p>
-
-                   	<p>
-
-                    <li><a href="http://www.amazon.com/Schwinn-Protocol-Dual-Suspension-Mountain-26-Inch/dp/B001IANSJ6/​">通过照片卖产品，亚马逊</a></li>
-
-                    <li><a href="3d-for-amazon/index.html">三维亚马逊 + ？</a></li>
+                    <ul>
+                        <li><a href="http://www.cat.com/en_US/products/new/equipment/dozers/small-dozers/18267751.html">通过照片、示意图卖机械</a></li>
+                        <li><a href="3d-for-d4kz/index.html">三维机械模型卖机械</a></li>
+                    </ul>
                     </p>
-
-                    <li><a href="3d-on-taobao/index.html">淘宝 +  ？？</a></li>
-                   	</p>
-
+                    <p>
+                    <ul>
+                        <li><a href="http://www.pulte.com/communities/CA/roseville/Primros/floor-plans/683809/Residence-2.aspx#.VJYmQ8ABD">通过户型图卖房子</a></li>
+                        <li><a href="3d-for-pulte/index.html">三维建筑模型卖房子</a></li>
+                    </ul>
+                    </p>
+                    <p>
+                    <ul>
+                        <li><a href="http://www.amazon.com/Schwinn-Protocol-Dual-Suspension-Mountain-26-Inch/dp/B001IANSJ6/​">通过照片卖产品，亚马逊</a></li>
+                        <li><a href="3d-for-amazon/index.html">三维亚马逊 + ？</a></li>
+                    </ul>
+                    </p>
+                    <ul>
+                        <li><a href="https://item.taobao.com/item.htm?spm=a230r.1.14.12.vjiBMS&id=520646561711&ns=1&abbucket=14#detail">照片卖产品，淘宝</a></li>
+                        
+                        <li><a href="3d-on-taobao/index.html">淘宝 +  ？？</a></li>
+                    </ul>
+                    </p>
+                    <p><a href="videos/2d-3d.mov"> Video </a></p>
                 </section>
-           
- 
+
 
                 <section data-transition="slide">
                     <h2>我要上三维，告诉我怎么做？</h2>
                     <p class="fragment">答案就是</p>
                     <div class="fragment">
                         <h2>WebGL</h2>
-                      
+
                     </div>
-      
+
                 </section>
-               
-                
+
+
                 <section data-transition="slide">
                     <h2>WebGL</h2>
                     <p class="fragment">无需任何插件</p>
@@ -223,13 +180,10 @@
                         <p>几乎所有现代浏览器都支持</p>
                         <img  class="img-responsive img-rounded" src="img/supported-browsers.png">
                     </div>
-
                     <p class="fragment">但是WebGL也不是那么简单</p>
-      
+
                 </section>
 
-
-                
                 <section data-transition="slide">
                     <h2>有没有更简单的...</h2>
                     <p class="fragment">Autodesk发布了一款在线模型浏览器</p>
@@ -237,90 +191,81 @@
                         <div class="col-xs-6 fragment">
                             <h1><i class="fa fa-cloud-upload"></i></h1>
                             <p>上传你的模型</p>
-                            
+
                         </div>
                         <div class="col-xs-6 fragment">
                             <h1><i class="fa fa-desktop"></i></h1>
                             <p>在浏览器和移动设备中浏览</p>
-                            
+
                         </div>
                     </div>
                     <p class="fragment">简单、而且免费使用!</p>
                 </section>
-                
-             
-                
+
+
+
                 <section data-transition="slide">
                     <h2>什么东东？ 现在试试...</h2>
                     <a href="https://360.autodesk.com/viewer">https://360.autodesk.com/viewer</a>
+                    <p><a href="videos/a360-viewer.mov"> Video </a></p>
                 </section>
-                
-                
-                
+
+
+
                 <section data-transition="slide">
                     <h2>支持的数据格式</h2>
                     <p>ipt, neu, stla, stl, xlsx, jt, jpg, skp, prt, dwf, xls, png, sldasm, step, dwg, zip, nwc, model, sim, stp, ste, f3d, pdf, iges, dwt, catproduct, csv, igs, sldprt, cgr, 3dm, sab, obj, pptx, cam360, jpeg, bmp, gbxml, exp, ppt, doc, wire, ige, rcp, txt, dae, x_b, 3ds, rtf, rvt, g, sim360, iam, asm, dlv3, x_t, pps, session, xas, xpr, docx, catpart, stlb, tiff, nwd, sat, fbx, smb, smt, ifc, dwfx, tif</p>
                     <p>还在继续增加中...</p>
                 </section>
-
                 <section data-transition="slide">
                     <h2>模型 + 属性数据</h2>
                     <!-- <p>不光是显示三维模型本身</p>
                     <p>更重要的是模型上附加的属性数据</p> -->
                     <img class="img img-responsive img-rounded" src="img/mongo-viewer.png">
                     <p></p>
-                    <p><a href="https://mongo.autodesk.io">https://mongo.autodesk.io</a></p>
+                    <p><a href="https://mongo.autodesk.io">https://mongo.autodesk.io</a> | <a href="videos/mongo-viewer.mov"> Video </a></p>
+                   
                 </section>
-
                 <section data-transition="slide">
                     <h2>还提供编程接口 </h2>
                     <p>View and Data API</p>
                     <div class="col-xs-6 fragment">
-                            <h1><i class="fa fa-cloud-upload"></i></h1>
-                          
-                            <p>REST API</p>
-                            <p>
-                            <ul>
-                            	<li>身份认证</li>
-                            	<li>模型上传</li>
-                            	<li>格式转换</li>
-                            	
-                            </ul>
-                        	</p>
-                        </div>
-                        <div class="col-xs-6 fragment">
-                            <h1><i class="fa fa-desktop"></i></h1>
-                        
-                            <p>JavaScript API</p>
-                            <ul>
-                            	<li>相机控制</li>
-                            	<li>获取属性信息</li>
-                            	<li>用户事件处理</li>
-                            	<li>属性信息搜索</li>
-		                        <li>自定义用户界面</li>
-		                        <li>...</li>
-                            </ul>
-                        </div>
+                        <h1><i class="fa fa-cloud-upload"></i></h1>
 
-                        
+                        <p>REST API</p>
+                        <p>
+                        <ul>
+                            <li>身份认证</li>
+                            <li>模型上传</li>
+                            <li>格式转换</li>
+
+                        </ul>
+                        </p>
+                    </div>
+                    <div class="col-xs-6 fragment">
+                        <h1><i class="fa fa-desktop"></i></h1>
+
+                        <p>JavaScript API</p>
+                        <ul>
+                            <li>相机控制</li>
+                            <li>获取属性信息</li>
+                            <li>用户事件处理</li>
+                            <li>属性信息搜索</li>
+                            <li>自定义用户界面</li>
+                            <li>...</li>
+                        </ul>
+                    </div>
 
                 </section>
-
-
                 <section data-transition="slide">
                     <h2><i class="fa fa-github"></i>示例代码</h2>
-                    
+
                     <p><a href="http://developer-autodesk.github.io/">http://developer-autodesk.github.io</a></p>
-
                     <img  class="img-responsive img-rounded" src="img/dev-portal.png">
-
                     <p>众多<a href="http://developer-autodesk.github.io/">示例程序</a>供您学习参考!
-                        </p>
- 
+                    </p>
+
                 </section>
-
-               
-
 
                 <section data-transition="slide">
                     <h2>可能的应用场景</h2>
@@ -331,181 +276,145 @@
                         <li class="fragment">生产管理、设备运行监控</li>
                         <li class="fragment">游戏、虚拟现实</li>
                         <li class="fragment">...</li>
-
                     </ul>
-                   
-                </section>
 
+                </section>
                 <section data-transition="slide">
                     <h2>谁在用View and Data API?</h2>
                     <img src="img/who_is_using.jpg">
                 </section>
 
-
-                
                 <section data-transition="slide">
                     <h2>现在就开始</h2>
                     <p><a href="http://developer.autodesk.com">http://developer.autodesk.com</a></p>
                     <img src="img/dev-portal-keys.png">
-
                     <p><a href="http://developer.autodesk.com">创建一个你的App</a></p>
 
-                   
- 
+
                 </section>
-
-
                 <section data-transition="slide">
                     <h2>等等... 那些模型数据从哪儿来？</h2>
                     <p  class="fragment">CAD设计师 - AutoCAD 或其他CAD软件</p>
                     <p class="fragment">建筑设计师 - Revit 或其他建筑设计软件</p>
                     <p class="fragment">机械设计师 - Inventor/Fusion或其他设计软件</p>
                     <p class="fragment">3D设计师 - Max、Maya</p>
-                    
+
                     <p class="fragment">或者...</p>
                 </section>
-
                 <section data-transition="slide">
                     <h2>你自己！</h2>
-                    <img src="img/you.png">
-                    
-                    
-                </section>
+                    <img src="img/you-jobs.jpg">
 
+
+                </section>
                 <section data-transition="slide">
                     <h2>照片建模技术</h2>
                     <p class="col-xs-3"><img src="img/phones.jpg" class="img-responsive img-rounded"></p>
                     <p class="col-xs-3"><img src="img/cameras.jpg"  class="img-responsive  img-rounded"></p>
-                    
+
                     <p  class="col-xs-3"><i class="fa fa-plus"></i> </p>
                     <p class="col-xs-3"><img class="img img-responsive img-rounded" src="img/recap360-logo.png"></p>
-                    
-                    
-                   
-                </section>
 
+
+
+                </section>
                 <section data-transition="slide">
                     <h2>示例</h2>
                     <p><img class="img img-responsive img-rounded" src="img/lugouqiao_shibei.png"></p>
                     <!-- <p><iframe src="http://viewer.autodesk.io/node/gallery/embed/545034ae0982a308167817b6" frameborder="0" width="800" height="480"></iframe></p> -->
-                    <p class="fragment"><a href="http://www.cnblogs.com/junqilian/p/4076469.html">创建过程</a></p>
-                    
-                    
-                   
+                    <p class="fragment"><a href="http://www.cnblogs.com/junqilian/p/4076469.html">创建过程</a> |  <a href="videos/recap-viewer-blog.mov"> Video </a></p>
+
+
+
                 </section>
 
+                <!--                 <section data-transition="slide">
+                                        <h2>详细看看 View and Data API</h2>
+                                        <p><a href="http://developer-autodesk.github.io/LmvQuickStart/">服务器端REST API</a></p>
+                                        <a href="http://lmvdbg.iab.app42paas.com/">客户端JavaScript API</a>
 
-
-
-         
-
-
-
-<!--                 <section data-transition="slide">
-                    <h2>详细看看 View and Data API</h2>
-                    <p><a href="http://developer-autodesk.github.io/LmvQuickStart/">服务器端REST API</a></p>
-
-                    <a href="http://lmvdbg.iab.app42paas.com/">客户端JavaScript API</a>
- 
-                </section> 
-
-                <section data-transition="slide">
-                    <h2>View and Data API 服务器端REST API</h2>
-                    
-                    <ul>
-                        <li>身份认证</li>
-                        <li>模型上传</li>
-                        <li>模型格式转换</li>
-                    </ul>
-                </section>
-
-                <section data-transition="slide">
-                    <h2>View and Data API 客户端JavaScript API</h2>
-                    
-                    <ul>
-                        <li>创建浏览器端viewer</li>
-                        <li>相机控制</li>
-                        <li>获取属性信息</li>
-                        <li>用户事件处理</li>
-                        <li>属性信息搜索</li>
-                        <li>自定义UI</li>
-                        <li>...</li>
-                    </ul>
-                </section>
--->
-
-<!--                 <section data-transition="slide">
-                    <h2>关注我们的微信公众号</h2>
-                     
-                     <div class="col-xs-6 ">
-                        <img class="img img-responsive" src="img/AutodeskADN-Wechat.jpg" >
-                     </div>
- 					 <div class="col-xs-6">
-                        <p> AutodeskADN</p>
-                     </div>
+                                </section>
+                                <section data-transition="slide">
+                                        <h2>View and Data API 服务器端REST API</h2>
+                                        
+                                        <ul>
+                                                <li>身份认证</li>
+                                                <li>模型上传</li>
+                                                <li>模型格式转换</li>
+                                        </ul>
+                                </section>
+                                <section data-transition="slide">
+                                        <h2>View and Data API 客户端JavaScript API</h2>
+                                        
+                                        <ul>
+                                                <li>创建浏览器端viewer</li>
+                                                <li>相机控制</li>
+                                                <li>获取属性信息</li>
+                                                <li>用户事件处理</li>
+                                                <li>属性信息搜索</li>
+                                                <li>自定义UI</li>
+                                                <li>...</li>
+                                        </ul>
+                                </section>
+                -->
+                <!--                 <section data-transition="slide">
+                                        <h2>关注我们的微信公众号</h2>
+                                        
+                                        <div class="col-xs-6 ">
+                                                <img class="img img-responsive" src="img/AutodeskADN-Wechat.jpg" >
+                                        </div>
+                    <div class="col-xs-6">
+                                                <p> AutodeskADN</p>
+                                        </div>
                 </section> -->
-
                 <section data-transition="slide">
                     <h2>保持联系</h2>
                     <p><i class="fa fa-weibo fa-fw"></i><a href="http://www.weibo.com/junqilian">杜长宇Daniel </a> </p>
                     <p><i class="fa fa-linkedin"></i><a href="https://www.linkedin.com/pub/daniel-du/18/653/b89"> Linkedin</a>  </p>
                     <p><i class="fa fa-twitter fa-fw"></i> @daniel_du</p>
                     <p><i class="fa fa-envelope-o"></i><a href="mailto:daniel.du@autodesk.com">daniel.du@autodesk.com</a></p>
-                    
-                </section>
 
-                 <section data-transition="slide">
+                </section>
+                <section data-transition="slide">
                     <h2>Questions??</h2>
-                    
-                    
-                </section>
 
+
+                </section>
                 <section data-transition="slide">
                     <h2>Thank You!</h2>
-                    
-                    
+
+
                 </section>
-
-
-         <!--        <section data-transition="slide">
-                     <img src="img/Autodesk-logo.png" width="50%">
-
+                <!--        <section data-transition="slide">
+                                        <img src="img/Autodesk-logo.png" width="50%">
                 </section> -->
-                
-			</div>
-
-		</div>
-
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
-
-		<script>
-
-			// Full list of configuration options available at:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: true,
-
-				transition: 'none', // none/fade/slide/convex/concave/zoom
+        </section>
+            </div>
+        </div>
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.js"></script>
+        <script>
+        // Full list of configuration options available at:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'none', // none/fade/slide/convex/concave/zoom
                 backgroundTransition: 'none',
-
-				// Optional reveal.js plugins
-				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true },
-					{ src: 'plugin/notes/notes.js', async: true }
-				]
-			});
-
+        // Optional reveal.js plugins
+        dependencies: [
+        { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+        { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: 'plugin/zoom-js/zoom.js', async: true },
+        { src: 'plugin/notes/notes.js', async: true }
+        ]
+        });
             // Shows the slide number using default formatting
             Reveal.configure({ slideNumber: true });
-
             // Slide number formatting can be configured using these variables:
             //  h: current slide's horizontal index
             //  v: current slide's vertical index
@@ -513,7 +422,6 @@
             //  t: total number of slides (flattened)
             Reveal.configure({ slideNumber: 'c / t' });
 
-		</script>
-
-	</body>
+        </script>
+    </body>
 </html>
